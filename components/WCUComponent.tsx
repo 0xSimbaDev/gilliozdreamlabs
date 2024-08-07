@@ -15,25 +15,28 @@ const WCUComponent: NextPage<WCUComponentType> = ({
 }) => {
   return (
     <div
-      className={`w-[500px] flex flex-row items-start justify-start gap-[30px] text-left text-5xl text-white font-montserrat ${className}`}
+      className={`w-[380px] flex flex-row items-start justify-start text-left text-lg text-white font-montserrat ${className}`}
     >
-      <div className="w-[130px] relative h-[260px]">
-        <img
-          className="absolute top-[0px] left-[0px] rounded-2xl w-[100px] h-[100px] overflow-hidden"
-          alt=""
+      <div className="w-[130px] relative h-[140px]">
+        <div
+          className="absolute top-[0px] left-[0px] shadow-[0px_7px_16px_rgba(0,_0,_0,_0.25)] rounded-2xl bg-gray-1000 w-[70px] h-[70px] overflow-hidden flex flex-row items-center justify-center p-[15px] box-border"
           src={icon}
-        />
+        >
+          <img
+            className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full"
+            alt=""
+            src="/carbongrowth.svg"
+          />
+        </div>
         <img
-          className="absolute top-[0px] left-[130px] max-w-full overflow-hidden h-[260px]"
+          className="absolute top-[0px] left-[100px] max-w-full overflow-hidden h-[140px]"
           alt=""
           src="/vector-11.svg"
         />
       </div>
-      <div className="w-[314px] relative h-[260px]">
-        <b className="absolute top-[0px] left-[0px] inline-block w-[314px] h-[41.4px]">
-          {title}
-        </b>
-        <div className="absolute top-[56.4px] left-[0px] text-lg inline-block w-[297px] h-[188.4px]">
+      <div className="self-stretch flex-1 flex flex-col items-start justify-start gap-[15px]">
+        <b className="self-stretch relative">{title}</b>
+        <div className="self-stretch flex-1 relative text-xs">
           {description}
         </div>
       </div>
