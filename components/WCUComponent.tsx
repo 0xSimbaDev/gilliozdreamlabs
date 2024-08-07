@@ -18,18 +18,15 @@ const WCUComponent: NextPage<WCUComponentType> = ({
       className={`w-[380px] flex flex-row items-start justify-start text-left text-lg text-white font-montserrat ${className}`}
     >
       <div className="w-[130px] relative h-[140px]">
-        <div
-          className="absolute top-[0px] left-[0px] shadow-[0px_7px_16px_rgba(0,_0,_0,_0.25)] rounded-2xl bg-gray-1000 w-[70px] h-[70px] overflow-hidden flex flex-row items-center justify-center p-[15px] box-border"
-          src={icon}
-        >
+        <div className="absolute top-[0px] left-[0px] shadow-[0px_7px_16px_rgba(0,_0,_0,_1)] rounded-2xl bg-gray-1000 w-[70px] h-[70px] overflow-hidden flex flex-row items-center justify-center p-[2px] box-border">
           <img
             className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full"
             alt=""
-            src="/carbongrowth.svg"
+            src={icon}
           />
         </div>
         <img
-          className="absolute top-[0px] left-[100px] max-w-full overflow-hidden h-[140px]"
+          className="absolute top-[0px] left-[100px] max-w-full overflow-hidden h-[130px]"
           alt=""
           src="/vector-11.svg"
         />
