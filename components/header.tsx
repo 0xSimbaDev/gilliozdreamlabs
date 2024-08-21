@@ -18,7 +18,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
   };
 
   const handleScroll = () => {
-    const sections = ['home', 'problem', 'solution', 'advantage', 'process', 'contact'];
+    const sections = ['home', 'problem', 'solution', 'advantage', 'process'];
     const scrollPosition = window.scrollY + 100; 
 
     for (const section of sections) {
@@ -61,9 +61,9 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         <a href="#process" className={`outline-none cursor-pointer [border:none] p-0 bg-[transparent] relative text-xs font-inter text-white text-left inline-block ${activeSection === 'process' ? 'border-b-2 border-blueviolet' : ''}`} style={{ textDecoration: 'none' }}>
           Our Process
         </a>
-        <a href="#contact" className={`outline-none cursor-pointer [border:none] p-0 bg-[transparent] relative text-xs font-inter text-white text-left inline-block ${activeSection === 'contact' ? 'border-b-2 border-blueviolet' : ''}`} style={{ textDecoration: 'none' }}>
+        {/* <a href="#contact" className={`outline-none cursor-pointer [border:none] p-0 bg-[transparent] relative text-xs font-inter text-white text-left inline-block ${activeSection === 'contact' ? 'border-b-2 border-blueviolet' : ''}`} style={{ textDecoration: 'none' }}>
           Contact Us
-        </a>
+        </a> */}
       </nav>
       <button onClick={toggleSidebar} className="cursor-pointer [border:none] p-0 bg-[transparent] h-6 w-6 relative overflow-hidden shrink-0 hidden z-[0] md:flex">
         <img
@@ -90,9 +90,9 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
           <a href="#process" onClick={closeSidebar} className={`outline-none cursor-pointer [border:none] p-0 bg-[transparent] relative text-xs font-inter text-white text-left inline-block mb-2 ${activeSection === 'process' ? 'border-b-2 border-blueviolet' : ''}`} style={{ textDecoration: 'none' }}>
             Our Process
           </a>
-          <a href="#contact" onClick={closeSidebar} className={`outline-none cursor-pointer [border:none] p-0 bg-[transparent] relative text-xs font-inter text-white text-left inline-block mb-2 ${activeSection === 'contact' ? 'border-b-2 border-blueviolet' : ''}`} style={{ textDecoration: 'none' }}>
+          {/* <a href="#contact" onClick={closeSidebar} className={`outline-none cursor-pointer [border:none] p-0 bg-[transparent] relative text-xs font-inter text-white text-left inline-block mb-2 ${activeSection === 'contact' ? 'border-b-2 border-blueviolet' : ''}`} style={{ textDecoration: 'none' }}>
             Contact Us
-          </a>
+          </a> */}
         </div>
       )}
     </header>
