@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import ContactForm from './ContactForm';
 
 export type ContactSectionType = {
   className?: string;
@@ -24,52 +25,11 @@ const ContactSection: NextPage<ContactSectionType> = ({ className = "" }) => {
               Let’s connect
             </h1>
             <div className="w-[415px] relative text-base tracking-[-0.01em] inline-block opacity-[0.8]">
-              Send us a message for inquiry.
+              We’d love to hear from you! Please fill out the form below and we’ll get in touch with you shortly.
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-start justify-start gap-3.5">
-            <div className="self-stretch flex flex-row items-start justify-start gap-3.5 z-[4]">
-              <input
-                className="border-gray-700 border-[1px] border-solid [outline:none] font-montserrat text-mini bg-gray-600 flex-1 rounded-8xs flex flex-col items-start justify-center py-3 px-3.5 text-gray-500"
-                name="first_name"
-                placeholder="First Name"
-                type="text"
-              />
-              <input
-                className="border-gray-700 border-[1px] border-solid [outline:none] font-montserrat text-mini bg-gray-600 flex-1 rounded-8xs flex flex-col items-start justify-center py-3 px-3.5 text-gray-500"
-                name="last_name"
-                placeholder="Last Name"
-                type="text"
-              />
-            </div>
-            <input
-              className="border-gray-700 border-[1px] border-solid [outline:none] font-montserrat text-mini bg-gray-600 self-stretch rounded-8xs flex flex-col items-start justify-center py-3 px-3.5 text-gray-500 z-[3]"
-              name="email"
-              placeholder="Email"
-              type="text"
-            />
-            <input
-              className="border-gray-700 border-[1px] border-solid [outline:none] font-montserrat text-mini bg-gray-600 self-stretch rounded-8xs flex flex-col items-start justify-center py-3 px-3.5 text-gray-500 z-[2]"
-              name="phone_number"
-              placeholder="Phone Number"
-              type="text"
-            />
-            <textarea
-              className="border-gray-700 border-[1px] border-solid bg-gray-600 font-montserrat text-mini [outline:none] self-stretch rounded-8xs box-border h-[111px] flex flex-col items-start justify-start py-3 px-3.5 text-gray-500 z-[1]"
-              placeholder="Message"
-            />
-            <button className="cursor-pointer [border:none] py-3 px-2.5 bg-blueviolet self-stretch rounded-8xs flex flex-row items-center justify-center z-[0]">
-              <div className="relative text-lg tracking-[-0.01em] font-semibold font-montserrat text-white text-left">
-                Send
-              </div>
-            </button>
-          </div>
+          <ContactForm />
         </div>
-        <img
-          className="w-[516px] h-[536px] overflow-hidden shrink-0 object-cover md:hidden"
-          alt=""
-          src="/image-box@2x.png"
-        />
       </div>
     </div>
   );
