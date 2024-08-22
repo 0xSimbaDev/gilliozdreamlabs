@@ -7,7 +7,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <Head>
-        <title>Quantboost Technology</title>
+        <title>End Business Chaos with Notion: Streamline, Simplify, Succeed</title>
+        <meta name="description" content="Tired of juggling multiple tools and missing opportunities? Quantboost's custom Notion solutions centralize your workflow, boost productivity, and drive growth. Say goodbye to scattered information and hello to a unified workspace." />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
