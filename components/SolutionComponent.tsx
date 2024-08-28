@@ -13,11 +13,13 @@ const SolutionComponent: NextPage<SolutionComponentType> = ({
 }) => {
   return (
     <div
-      className={`h-[160px] overflow-hidden flex flex-col items-center justify-center py-0 px-[15px] box-border gap-[15px] text-left text-lg text-white font-montserrat ${className}`}
+      className={`h-[180px] w-[241.8px] overflow-hidden flex flex-col items-center justify-center px-[15px] box-border gap-[15px] text-left text-white font-montserrat sm:h-auto transform transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:-skew-y-3 hover:-skew-x-3 hover:bg-blueviolet ${className}`}
     >
-      <b className="w-[241.8px] relative inline-block">{heading}</b>
-      <div className="w-[241.8px] flex-1 relative text-sm inline-block">
-        {subHeading}
+      <div className="p-4 rounded-lg w-full h-full flex flex-col justify-center items-start gap-4"> 
+        <b className="relative inline-block text-[1rem]">{heading}</b>
+        <div className="flex-1 relative text-sm inline-block text-[0.8rem]">
+          {subHeading}
+        </div>
       </div>
     </div>
   );
