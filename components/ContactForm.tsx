@@ -33,61 +33,59 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     }
 };
 
-  return (
-    <form onSubmit={handleSubmit} className="self-stretch flex flex-col items-start justify-start gap-3.5">
-      <div className="self-stretch flex flex-row items-start justify-start gap-3.5 z-[4]">
-        <input
-          className="border-gray-700 border-[1px] border-solid [outline:none] font-montserrat text-mini bg-gray-600 flex-1 rounded-8xs flex flex-col items-start justify-center py-3 px-3.5 text-gray-500"
-          name="first_name"
-          placeholder="First Name"
-          type="text"
-          value={formData.first_name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          className="border-gray-700 border-[1px] border-solid [outline:none] font-montserrat text-mini bg-gray-600 flex-1 rounded-8xs flex flex-col items-start justify-center py-3 px-3.5 text-gray-500"
-          name="last_name"
-          placeholder="Last Name"
-          type="text"
-          value={formData.last_name}
-          onChange={handleChange}
-          required
-        />
-      </div>
+return (
+  <form onSubmit={handleSubmit} className="flex flex-col gap-3.5 w-full max-w-auto"> 
+    <div className="flex flex-row sm:flex-col gap-3.5"> 
       <input
-        className="border-gray-700 border-[1px] border-solid [outline:none] font-montserrat text-mini bg-gray-600 self-stretch rounded-8xs flex flex-col items-start justify-center py-3 px-3.5 text-gray-500 z-[3]"
-        name="email"
-        placeholder="Email"
-        type="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-      <input
-        className="border-gray-700 border-[1px] border-solid [outline:none] font-montserrat text-mini bg-gray-600 self-stretch rounded-8xs flex flex-col items-start justify-center py-3 px-3.5 text-gray-500 z-[2]"
-        name="phone_number"
-        placeholder="Phone Number"
+        className="border-gray-700 border text-mini bg-gray-600 flex-1 rounded-lg p-3.5 text-gray-500 focus:outline-none" 
+        name="first_name"
+        placeholder="First Name"
         type="text"
-        value={formData.phone_number}
+        value={formData.first_name}
         onChange={handleChange}
         required
       />
-      <textarea
-        className="border-gray-700 border-[1px] border-solid bg-gray-600 font-montserrat text-mini [outline:none] self-stretch rounded-8xs box-border h-[111px] flex flex-col items-start justify-start py-3 px-3.5 text-gray-500 z-[1]"
-        name="message"
-        placeholder="Message"
-        value={formData.message}
+      <input
+        className="border-gray-700 border text-mini bg-gray-600 flex-1 rounded-lg p-3.5 text-gray-500 focus:outline-none" 
+        name="last_name"
+        placeholder="Last Name"
+        type="text"
+        value={formData.last_name}
         onChange={handleChange}
         required
       />
-      <button className="cursor-pointer [border:none] py-3 px-2.5 bg-blueviolet self-stretch rounded-8xs flex flex-row items-center justify-center z-[0]">
-        <div className="relative text-lg tracking-[-0.01em] font-semibold font-montserrat text-white text-left">
-          Send
-        </div>
-      </button>
-    </form>
-  );
+    </div>
+    <input
+      className="border-gray-700 border text-mini bg-gray-600 w-auto rounded-lg p-3.5 text-gray-500 focus:outline-none" 
+      name="email"
+      placeholder="Email"
+      type="email"
+      value={formData.email}
+      onChange={handleChange}
+      required
+    />
+    <input
+      className="border-gray-700 border text-mini bg-gray-600 w-auto rounded-lg p-3.5 text-gray-500 focus:outline-none" 
+      name="phone_number"
+      placeholder="Phone Number"
+      type="text"
+      value={formData.phone_number}
+      onChange={handleChange}
+      required
+    />
+    <textarea
+      className="border-gray-700 border bg-gray-600 font-montserrat text-mini h-[111px] w-auto rounded-lg p-3.5 text-gray-500 focus:outline-none resize-none" 
+      name="message"
+      placeholder="Message"
+      value={formData.message}
+      onChange={handleChange}
+      required
+    />
+    <button className="bg-blueviolet text-white font-semibold font-montserrat py-3 px-5 rounded-lg hover:bg-opacity-90 transition duration-300">
+      Send
+    </button>
+  </form>
+    );
 };
 
 export default ContactForm;
