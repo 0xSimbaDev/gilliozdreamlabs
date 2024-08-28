@@ -6,23 +6,51 @@ export type ProblemSectionType = {
 
 const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
   return (
-    <div
-      className={`self-stretch flex flex-row items-center justify-center py-[285px] px-[150px] bg-[url('/problem-section@3x.png')] bg-cover bg-no-repeat bg-[center] text-left text-17xl text-white font-montserrat md:flex-col gap-[30px] md:pl-[30px] md:pr-[30px] md:box-border ${className}`}
+    <section 
+      className={`flex flex-col items-center justify-center text-white font-montserrat p-6 md:p-10 ${className}`}
     >
-      <div className="w-[487.5px] h-[229px] flex flex-col items-start justify-start gap-[30px] md:flex-col md:items-center md:justify-start">
-        <b className="self-stretch relative md:text-center">
-          Lost Time, Scattered Tools, Missed Opportunities
-        </b>
-        <div className="self-stretch relative text-lg md:text-center">
-          Reclaim Control with a Unified Workspace
+      <div className="flex flex-row items-center justify-center gap-6 max-w-full text-left text-[1.2rem] sm:text-[0.8rem]">
+        <div className="flex items-center gap-3 md:flex-col "> 
+          <img
+            className="w-[100px] h-[100px] object-cover"
+            loading="lazy"
+            alt=""
+            src="/Lost_Time.svg"
+          />
+          <a className="font-bold no-underline text-center">
+            Lost Time
+          </a>
+        </div>
+
+        <div className="flex items-center gap-3 md:flex-col">
+          <img
+            className="w-[100px] h-[100px] object-cover"
+            loading="lazy"
+            alt=""
+            src="/Scattered_Tools.svg"
+          />
+          <a className="font-bold no-underline text-center">
+            Scattered Tools
+          </a>
+        </div>
+
+        <div className="flex items-center gap-3 md:flex-col">
+          <img
+            className="w-[100px] h-[100px] object-cover" 
+            loading="lazy"
+            alt=""
+            src="/Missed_Opportunities.svg"
+          />
+          <a className="font-bold no-underline text-center">
+            Missed Opportunities
+          </a>
         </div>
       </div>
-      <img
-        className="w-[277px] relative h-[376px] object-cover"
-        alt=""
-        src="/content-image@2x.png"
-      />
-    </div>
+
+      <h3 className="text-lg font-light text-center text-sm md:text-[1rem] sm:text-[0.7rem] mt-6">
+        Reclaim Control with a Unified Workspace
+      </h3>
+    </section>
   );
 };
 
