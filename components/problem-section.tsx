@@ -1,10 +1,32 @@
 import type { NextPage } from "next";
+import { useLanguage } from "../context/LanguageContext";
 
 export type ProblemSectionType = {
   className?: string;
 };
 
+type Language = "ENG" | "FR"; 
+
 const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
+  const { language } = useLanguage() as { language: Language };
+
+  const translations = {
+    ENG: {
+      headline: "Lost Time, Scattered Tools, Missed Opportunities",
+      subheading: "Reclaim Control with a Unified Workspace",
+      lostTime: "Lost Time",
+      scatteredTools: "Scattered Tools",
+      missedOpportunities: "Missed Opportunities"
+    },
+    FR: {
+      headline: "Temps Perdu, Outils Dispersés, Opportunités Manquées",
+      subheading: "Reprenez le Contrôle avec un Espace de Travail Unifié",
+      lostTime: "Temps Perdu",
+      scatteredTools: "Outils Dispersés",
+      missedOpportunities: "Opportunités Manquées"
+    }
+  };
+
   return (
     <section 
       className={`flex flex-col items-center justify-center text-white font-montserrat p-6 md:p-10 ${className}`}
@@ -18,7 +40,7 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
             src="/Lost_Time.svg"
           />
           <a className="font-bold no-underline text-center">
-            Lost Time
+            {translations[language].lostTime} 
           </a>
         </div>
 
@@ -30,7 +52,7 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
             src="/Scattered_Tools.svg"
           />
           <a className="font-bold no-underline text-center">
-            Scattered Tools
+            {translations[language].scatteredTools} 
           </a>
         </div>
 
@@ -42,13 +64,13 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
             src="/Missed_Opportunities.svg"
           />
           <a className="font-bold no-underline text-center">
-            Missed Opportunities
+            {translations[language].scatteredTools} 
           </a>
         </div>
       </div>
 
       <h3 className="text-lg font-light text-center text-sm md:text-[1rem] sm:text-[0.7rem] mt-6">
-        Reclaim Control with a Unified Workspace
+        {translations[language].subheading} 
       </h3>
     </section>
   );
