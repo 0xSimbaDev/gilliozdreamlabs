@@ -14,26 +14,26 @@ const WCUComponent: NextPage<WCUComponentType> = ({
   icon,
 }) => {
   return (
-    <div
-      className={`w-[380px] flex flex-row items-start justify-start text-left text-lg text-white font-montserrat ${className}`}
-    >
-      <div className="w-[130px] relative h-[140px]">
-        <div className="absolute top-[0px] left-[0px] shadow-[0px_7px_16px_rgba(0,_0,_0,_1)] rounded-2xl bg-grayq-1000 w-[70px] h-[70px] overflow-hidden flex flex-row items-center justify-center p-[2px] box-border">
+    <div className={`flex flex-row items-start justify-start text-left text-lg text-white font-montserrat w-[380px] sm:max-w-[320px] ${className}`}>
+      <div className="relative h-[140px] w-[130px]">
+        <div className="absolute top-0 left-0 shadow-[0px_7px_16px_rgba(0,_0,_0,_1)] rounded-2xl bg-gray-900 flex items-center justify-center p-1 w-[70px] h-[70px] sm:w-[50px] sm:h-[50px]">
           <img
-            className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full"
+            className="max-w-full max-h-full"
             alt=""
             src={icon}
           />
         </div>
         <img
-          className="absolute top-[0px] left-[100px] max-w-full overflow-hidden h-[130px]"
+          className="absolute top-0 left-[100px] max-w-full h-[130px]"
           alt=""
           src="/vector-11.svg"
         />
       </div>
-      <div className="self-stretch flex-1 flex flex-col items-start justify-start gap-[15px]">
-        <b className="self-stretch relative">{title}</b>
-        <div className="self-stretch flex-1 relative text-xs">
+      <div className="flex-1 flex flex-col items-start justify-start gap-3">
+        <b className="sm:text-base"> 
+          {title}
+        </b>
+        <div className="flex-1 text-xs sm:text-[0.7rem]"> 
           {description}
         </div>
       </div>
