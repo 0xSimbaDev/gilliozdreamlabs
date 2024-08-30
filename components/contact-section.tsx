@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import ContactForm from './ContactForm';
 import { useLanguage } from "../context/LanguageContext";
-
-type Language = "ENG" | "FR";
+import { Language } from "../context/types";
 
 export type ContactSectionType = {
   className?: string;

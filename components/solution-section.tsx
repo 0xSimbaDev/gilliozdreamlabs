@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import SolutionComponent from "./SolutionComponent";
 import { useLanguage } from "../context/LanguageContext";
-
-type Language = "ENG" | "FR"; 
+import { Language } from "../context/types";
 
 export type SolutionSection1Type = {
   className?: string;

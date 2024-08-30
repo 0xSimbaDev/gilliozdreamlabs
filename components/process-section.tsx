@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { useLanguage } from "../context/LanguageContext";
-
-type Language = "ENG" | "FR";
+import { Language } from "../context/types";
 
 export type ProcessSectionType = {
   className?: string;

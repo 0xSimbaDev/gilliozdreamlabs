@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import WCUComponent, { WCUComponentType } from "./WCUComponent";
 import { useLanguage } from "../context/LanguageContext";
-
-type Language = "ENG" | "FR";
+import { Language } from "../context/types";
 
 export type WhyChooseUsType = {
   className?: string;
