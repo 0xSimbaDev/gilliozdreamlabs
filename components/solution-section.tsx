@@ -1,11 +1,7 @@
 import type { NextPage } from "next";
 import SolutionComponent from "./SolutionComponent";
 import { useLanguage } from "../context/LanguageContext";
-import { Language } from "../context/types";
-
-export type SolutionSection1Type = {
-  className?: string;
-};
+import { Language, SolutionSection1Type } from "../types";
 
 const SolutionSection: NextPage<SolutionSection1Type> = ({
   className = "",

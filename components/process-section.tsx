@@ -1,10 +1,6 @@
 import type { NextPage } from "next";
 import { useLanguage } from "../context/LanguageContext";
-import { Language } from "../context/types";
-
-export type ProcessSectionType = {
-  className?: string;
-};
+import { Language, ProcessSectionType } from "../types";
 
 const ProcessSection: NextPage<ProcessSectionType> = ({ className = "" }) => {
   const { language } = useLanguage() as { language: Language };

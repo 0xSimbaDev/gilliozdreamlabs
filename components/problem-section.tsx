@@ -1,10 +1,6 @@
 import type { NextPage } from "next";
 import { useLanguage } from "../context/LanguageContext";
-import { Language } from "../context/types";
-
-export type ProblemSectionType = {
-  className?: string;
-};
+import { Language, ProblemSectionType } from "../types";
 
 const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
   const { language } = useLanguage() as { language: Language };

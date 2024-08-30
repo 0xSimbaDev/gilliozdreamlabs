@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Language } from '../context/types';
+import { Language } from '../types';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

@@ -1,11 +1,5 @@
 import type { NextPage } from "next";
-
-export type WCUComponentType = {
-  className?: string;
-  title?: string;
-  description?: string;
-  icon?: string;
-};
+import { WCUComponentType } from "../types";
 
 const WCUComponent: NextPage<WCUComponentType> = ({
   className = "",

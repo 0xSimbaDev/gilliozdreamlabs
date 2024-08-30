@@ -1,11 +1,7 @@
 import type { NextPage } from "next";
-import WCUComponent, { WCUComponentType } from "./WCUComponent";
+import WCUComponent from "./WCUComponent";
 import { useLanguage } from "../context/LanguageContext";
-import { Language } from "../context/types";
-
-export type WhyChooseUsType = {
-  className?: string;
-};
+import { Language, WCUComponentType, WhyChooseUsType } from "../types";
 
 const WhyChooseUs: NextPage<WhyChooseUsType> = ({ className = "" }) => {
   const { language } = useLanguage() as { language: Language };

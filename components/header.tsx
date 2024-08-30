@@ -1,9 +1,6 @@
 import type { NextPage } from 'next';
 import { useLanguage } from '../context/LanguageContext';
-
-export type HeaderType = {
-  className?: string;
-};
+import { HeaderType } from '../types';
 
 const Header: NextPage<HeaderType> = ({ className = "" }) => {
   const { language, setLanguage } = useLanguage(); 

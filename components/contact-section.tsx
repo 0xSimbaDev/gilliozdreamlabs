@@ -1,11 +1,7 @@
 import type { NextPage } from "next";
 import ContactForm from './ContactForm';
 import { useLanguage } from "../context/LanguageContext";
-import { Language } from "../context/types";
-
-export type ContactSectionType = {
-  className?: string;
-};
+import { Language, ContactSectionType } from "../types";
 
 const ContactSection: NextPage<ContactSectionType> = ({ className = "" }) => {
   // Get the language from the context

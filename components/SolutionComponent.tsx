@@ -1,10 +1,5 @@
 import type { NextPage } from "next";
-
-export type SolutionComponentType = {
-  className?: string;
-  heading?: string;
-  subHeading?: string;
-};
+import { SolutionComponentType } from "../types";
 
 const SolutionComponent: NextPage<SolutionComponentType> = ({
   className = "",
