@@ -59,7 +59,7 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
             src="/Missed_Opportunities.svg"
           />
           <a className="font-bold no-underline text-center">
-            {translations[language].scatteredTools} 
+            {translations[language].missedOpportunities} 
           </a>
         </div>
       </div>
