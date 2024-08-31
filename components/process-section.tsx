@@ -4,6 +4,7 @@ import { Language, ProcessSectionType } from "../types";
 
 const ProcessSection: NextPage<ProcessSectionType> = ({ className = "" }) => {
   const { language } = useLanguage() as { language: Language };
+  const imageSrc = language === 'ENG' ? '/processes-image-eng.svg' : '/processes-image-fr.svg';
 
   const translations: Record<Language, { headline: string; description: string }> = {
     ENG: {
@@ -33,7 +34,7 @@ const ProcessSection: NextPage<ProcessSectionType> = ({ className = "" }) => {
         <img
           className="w-[619px] object-contain rounded-lg md:rounded-xl sm:max-w-[350px]"
           alt=""
-          src="/processes-image@2x.png"
+          src={imageSrc}
         />
       </div>
     </section>
