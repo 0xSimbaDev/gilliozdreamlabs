@@ -4,7 +4,7 @@ import { Language, ProcessSectionType } from "../types";
 
 const ProcessSection: NextPage<ProcessSectionType> = ({ className = "" }) => {
   const { language } = useLanguage() as { language: Language };
-  const imageSrc = language === 'ENG' ? '/processes-image-eng1.svg' : '/processes-image-fr.svg';
+  const imageSrc = language === 'ENG' ? '/processes-image-eng@1.svg' : '/processes-image-fr.svg';
 
   const translations: Record<Language, { headline: string; description: string }> = {
     ENG: {
