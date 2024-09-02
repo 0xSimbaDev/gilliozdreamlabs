@@ -59,7 +59,7 @@ const Index: NextPage = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 p-2 w-[50px] h-[50px] bg-[#8C30F5] text-white rounded-full shadow-lg"
+          className="fixed bottom-4 right-4 p-2 w-[50px] h-[50px] bg-[#8C30F5] text-white rounded-full shadow-lg cursor-pointer"
         >
           ↑
         </button>

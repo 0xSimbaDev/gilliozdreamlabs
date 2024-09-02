@@ -37,7 +37,7 @@ const HomeSection: NextPage<HomeSectionType> = ({ className = "" }) => {
           {translations[language].subheading}
         </h3>
         <button 
-          className="bg-blueviolet text-white text-bold font-montserrat py-3 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blueviolet"
+          className="bg-blueviolet text-white text-bold font-montserrat py-3 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blueviolet cursor-pointer"
           onClick={handleContactClick} 
         >
           {translations[language].buttonText}

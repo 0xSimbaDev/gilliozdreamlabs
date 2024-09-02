@@ -15,14 +15,18 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
       </h1>
       <nav className="h-[29px] overflow-hidden flex flex-row items-center justify-start gap-[30px] z-[1] md:w-auto md:[align-self:unset] md:flex-row">
         <div className="flex"> 
-          <button 
-            className={`py-2 px-4 rounded-l ${language === "ENG" ? 'bg-blueviolet text-white' : 'bg-gray-300 text-gray-700'}`}
+          <button
+            className={`py-2 px-4 rounded-l 
+                        ${language === "ENG" ? 'bg-blueviolet text-white' : 'bg-gray-300 text-gray-700'} 
+                        hover:bg-opacity-80 transition duration-300 cursor-pointer`}
             onClick={() => setLanguage("ENG")}
           >
             ENG
           </button>
-          <button 
-            className={`py-2 px-4 rounded-r ${language === "FR" ? 'bg-blueviolet text-white' : 'bg-gray-300 text-gray-700'}`}
+          <button
+            className={`py-2 px-4 rounded-r 
+                        ${language === "FR" ? 'bg-blueviolet text-white' : 'bg-gray-300 text-gray-700'} 
+                        hover:bg-opacity-80 transition duration-300 cursor-pointer`}
             onClick={() => setLanguage("FR")}
           >
             FR

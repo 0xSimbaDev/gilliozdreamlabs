@@ -150,7 +150,7 @@ const ContactForm = () => {
         onChange={handleChange}
         required
       />
-      <button className="bg-blueviolet text-white font-semibold font-montserrat py-3 px-5 rounded-lg hover:bg-opacity-90 transition duration-300">
+      <button className="bg-blueviolet text-white font-semibold font-montserrat py-3 px-5 rounded-lg hover:bg-opacity-90 transition duration-300 cursor-pointer">
         {translations[language].send}
       </button>
     </form>
