@@ -54,5 +54,19 @@
         "phoneNumber": "Phone Number",
         "message": "Message",
         "send": "Send"
+    },
+    "country": {
+      "US": "US",
+      "FR": "FR",
+      "UK": "UK",
+      "DE": "DE",
+      "JP": "JP",
+      "CN": "CN",
+      "AU": "AU",
+      "IN": "IN",
+      "BR": "BR",
+      "RU": "RU",
+      "PH": "PH",
+      "SG": "SG"
     }
   }

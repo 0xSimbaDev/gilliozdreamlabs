@@ -54,6 +54,20 @@
         "phoneNumber": "Numéro de téléphone",
         "message": "Message",
         "send": "Envoyer"
+    },
+    "country": {
+      "US": "États-Unis",
+      "FR": "France",
+      "UK": "Royaume-Uni",
+      "DE": "Allemagne",
+      "JP": "Japon",
+      "CN": "Chine",
+      "AU": "Australie",
+      "IN": "Inde",
+      "BR": "Brésil",
+      "RU": "Russie",
+      "PH": "Philippines",
+      "SG": "Singapour"
     }
 
   }
