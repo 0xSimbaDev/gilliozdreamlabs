@@ -8,6 +8,7 @@ import ProcessSection from "../components/process-section";
 import WhyChooseUs from "../components/why-choose-us";
 import ContactSection from "../components/contact-section";
 import { LanguageProvider } from "../context/LanguageContext";
+import { TranslationProvider } from "../context/TranslationContext";
 
 
 const Index: NextPage = () => {
@@ -32,29 +33,31 @@ const Index: NextPage = () => {
 
   return (
     <div className="w-full h-full relative bg-gray-400 overflow-hidden flex flex-col items-center justify-center md:flex-col">
-      <LanguageProvider> 
-        <Header />
-        <main className="w-full">
-          <section id="home">
-            <HomeSection />
-          </section>
-          <section id="problem">
-            <ProblemSection />
-          </section>
-          <section id="solution">
-            <SolutionSection />
-          </section>
-          <section id="process">
-            <ProcessSection />
-          </section>
-          <section id="advantage">
-            <WhyChooseUs />
-          </section>
-          <section id="contact">
-            <ContactSection />
-          </section>
-          
-        </main>
+      <LanguageProvider>
+        <TranslationProvider>
+          <Header />
+          <main className="w-full">
+            <section id="home">
+              <HomeSection />
+            </section>
+            <section id="problem">
+              <ProblemSection />
+            </section>
+            <section id="solution">
+              <SolutionSection />
+            </section>
+            <section id="process">
+              <ProcessSection />
+            </section>
+            <section id="advantage">
+              <WhyChooseUs />
+            </section>
+            <section id="contact">
+              <ContactSection />
+            </section>
+            
+          </main>
+        </TranslationProvider>
       </LanguageProvider>
       {showButton && (
         <button
