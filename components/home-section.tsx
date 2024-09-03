@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
-import { useLanguage } from "../context/LanguageContext";
-import { Language, HomeSectionType } from "../types";
+import { useTranslation } from "../context/TranslationContext";
+
+export type HomeSectionType = {
+  className?: string;
+};
 
 const HomeSection: NextPage<HomeSectionType> = ({ className = "" }) => {
   const handleContactClick = () => {
@@ -10,20 +13,7 @@ const HomeSection: NextPage<HomeSectionType> = ({ className = "" }) => {
     }
   };
 
-  const { language } = useLanguage() as { language: Language};
-
-  const translations = {
-    ENG: {
-      headline: "Simplify, Streamline, Succeed: Quantboost's Notion Solutions",
-      subheading: "Empower Your Team, Eliminate Chaos, Achieve More",
-      buttonText: "Contact Us"
-    },
-    FR: {
-      headline: "Simplifier, Rationaliser, Réussir: Les Solutions Notion de Quantboost",
-      subheading: "Renforcez votre équipe, éliminez le chaos, accomplissez davantage",
-      buttonText: "Contactez-nous"
-    }
-  };
+  const { translations } = useTranslation(); 
 
   return (
     <section
@@ -31,16 +21,16 @@ const HomeSection: NextPage<HomeSectionType> = ({ className = "" }) => {
     >
       <div className="text-content w-full text-center">
         <h1 className="text-[1.5rem] font-bold mb-4 sm:text-[1.2rem]">
-          {translations[language].headline}
+          {translations.home?.headline} 
         </h1>
         <h3 className="text-[1rem] font-light mb-6 sm:text-[0.8rem]">
-          {translations[language].subheading}
+          {translations.home?.subheading} 
         </h3>
         <button 
           className="bg-blueviolet text-white text-bold font-montserrat py-3 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blueviolet cursor-pointer"
           onClick={handleContactClick} 
         >
-          {translations[language].buttonText}
+          {translations.home?.buttonText}
         </button>
       </div>
     </section>

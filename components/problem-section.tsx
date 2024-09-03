@@ -1,29 +1,12 @@
 import type { NextPage } from "next";
-import { useLanguage } from "../context/LanguageContext";
-import { Language, ProblemSectionType } from "../types";
+import { ProblemSectionType } from "../types";
+import { useTranslation } from "../context/TranslationContext";
 
 const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
-  const { language } = useLanguage() as { language: Language };
-
-  const translations = {
-    ENG: {
-      headline: "Lost Time, Scattered Tools, Missed Opportunities",
-      subheading: "Reclaim Control with a Unified Workspace",
-      lostTime: "Lost Time",
-      scatteredTools: "Scattered Tools",
-      missedOpportunities: "Missed Opportunities"
-    },
-    FR: {
-      headline: "Temps Perdu, Outils Dispersés, Opportunités Manquées",
-      subheading: "Reprenez le Contrôle avec un Espace de Travail Unifié",
-      lostTime: "Temps Perdu",
-      scatteredTools: "Outils Dispersés",
-      missedOpportunities: "Opportunités Manquées"
-    }
-  };
+  const { translations } = useTranslation();
 
   return (
-    <section 
+    <section
       className={`flex flex-col items-center justify-center text-white font-montserrat p-6 md:p-10 ${className}`}
     >
       <div className="flex flex-row items-center justify-center gap-6 max-w-full text-left text-[1.2rem] sm:text-[0.8rem]">
@@ -35,7 +18,7 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
             src="/Lost_Time.svg"
           />
           <a className="font-bold no-underline text-center">
-            {translations[language].lostTime} 
+            {translations.problem?.lostTime} 
           </a>
         </div>
 
@@ -47,7 +30,7 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
             src="/Scattered_Tools.svg"
           />
           <a className="font-bold no-underline text-center">
-            {translations[language].scatteredTools} 
+            {translations.problem?.scatteredTools} 
           </a>
         </div>
 
@@ -59,13 +42,13 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
             src="/Missed_Opportunities.svg"
           />
           <a className="font-bold no-underline text-center">
-            {translations[language].missedOpportunities} 
+            {translations.problem?.missedOpportunities} 
           </a>
         </div>
       </div>
 
       <h3 className="text-lg font-light text-center text-sm md:text-[1rem] sm:text-[0.7rem] mt-6">
-        {translations[language].subheading} 
+        {translations.problem?.subheading} 
       </h3>
     </section>
   );
