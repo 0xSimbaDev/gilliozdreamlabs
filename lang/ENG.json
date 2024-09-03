@@ -1,0 +1,58 @@
+{
+    "home": {
+      "headline": "Simplify, Streamline, Succeed: Quantboost's Notion Solutions",
+      "subheading": "Empower Your Team, Eliminate Chaos, Achieve More",
+      "buttonText": "Contact Us"
+    },
+    "problem": {
+      "headline": "Lost Time, Scattered Tools, Missed Opportunities",
+      "subheading": "Reclaim Control with a Unified Workspace",
+      "lostTime": "Lost Time",
+      "scatteredTools": "Scattered Tools",
+      "missedOpportunities": "Missed Opportunities"
+    },
+    "process": {
+        "headline": "Our Simple, Effective Process",
+        "description": "We believe in a straightforward, collaborative approach to transforming your workspace. From initial consultation to ongoing support, we'll guide you through each step, ensuring a seamless transition to a more efficient and productive way of working."
+    },
+    "solution": {
+        "headline": "Transform Your Business with Notion",
+        "subheading": "Say goodbye to scattered tools and missed opportunities. Notion, tailored by Quantboost Technology, empowers your team with a unified workspace that fosters collaboration, streamlines workflows, and scales with your business.",
+        "solutions": [
+          { "heading": "Centralized Hub", "subHeading": "All your essential tools and data are in one place, accessible from anywhere." },
+          { "heading": "Scalable Solution", "subHeading": "Easily adapt and expand your Notion workspace as your business grows." },
+          { "heading": "Streamline Workflow", "subHeading": "Customize Notion to match your unique processes, eliminating the need for multiple tools." },
+          { "heading": "Enhance Collaboration", "subHeading": "Foster seamless communication and knowledge sharing among your team." },
+          { "heading": "Expert Guidance", "subHeading": "Leverage Quantboost's expertise to tailor Notion precisely to your needs." },
+          { "heading": "Secure & Accessible", "subHeading": "Your data in Notion is securely stored and accessible from anywhere, giving you peace of mind and flexibility." },
+          { "heading": "Data Control", "subHeading": "You have full control over your data, with options to easily back up and export it whenever needed." },
+          { "heading": "Tailored Solutions", "subHeading": "We customize Notion to fit your unique needs, whether you're integrating with existing systems or building a new tech stack from the ground up." }
+        ]
+    },
+    "why_choose_us": {
+        "headline": "Expertise That Sets Us Apart",
+        "subheading": "Transforming Workflows, Maximizing Productivity",
+        "wcuComponents": [
+          { "title": "Partners in Growth", "description": "We're not just consultants; we're your partners in digital transformation, empowering your team to achieve maximum efficiency, productivity, and growth.", "icon": "/growth.svg" },
+          { "title": "Microsoft Experience", "description": "Our team has honed their skills at Microsoft, working with leading CRM and customer service platforms.", "icon": "/experience.svg" },
+          { "title": "Expert Team", "description": "Seasoned software developers and strategists with diverse technical expertise.", "icon": "/team.svg" },
+          { "title": "Workflow Optimization", "description": "We leverage our experience to optimize your workflows and enhance customer experiences.", "icon": "/workflow.svg" },
+          { "title": "Custom Notion Solutions", "description": "We create tailored Notion workspaces that perfectly align with your unique business needs.", "icon": "/solution.svg" },
+          { "title": "Seamless Integration", "description": "Our proficiency in various development tools ensures a smooth and tailored Notion experience.", "icon": "/integration.svg" }
+        ]
+    },
+    "contact": {
+        "headline": "Contact Us",
+        "subheading": "Any question or remarks? Just write us a message!",
+        "connect": "Let’s connect",
+        "connectDescription": "We’d love to hear from you! Please fill out the form below and we’ll get in touch with you shortly."
+    },
+    "contact_form": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "phoneNumber": "Phone Number",
+        "message": "Message",
+        "send": "Send"
+    }
+  }

@@ -1,0 +1,59 @@
+{
+    "home": {
+      "headline": "Simplifier, Rationaliser, Réussir : Les Solutions Notion de Quantboost",
+      "subheading": "Renforcez votre équipe, éliminez le chaos, accomplissez davantage",
+      "buttonText": "Contactez-nous"
+    },
+    "problem": {
+      "headline": "Temps Perdu, Outils Dispersés, Opportunités Manquées",
+      "subheading": "Reprenez le Contrôle avec un Espace de Travail Unifié",
+      "lostTime": "Temps Perdu",
+      "scatteredTools": "Outils Dispersés",
+      "missedOpportunities": "Opportunités Manquées"
+    },
+    "process": {
+        "headline": "Notre Processus Simple et Efficace",
+        "description": "Nous croyons en une approche simple et collaborative pour transformer votre espace de travail. De la consultation initiale au soutien continu, nous vous guiderons à chaque étape, assurant une transition en douceur vers un mode de travail plus efficace et productif."
+    },
+    "solution": {
+        "headline": "Transformez votre entreprise avec Notion",
+        "subheading": "Dites adieu aux outils dispersés et aux opportunités manquées. Notion, personnalisé par Quantboost Technology, permet à votre équipe de disposer d'un espace de travail unifié qui favorise la collaboration, rationalise les flux de travail et s'adapte à la croissance de votre entreprise.",
+        "solutions": [
+          { "heading": "Hub centralisé", "subHeading": "Tous vos outils et données essentiels sont réunis en un seul endroit, accessibles de partout." },
+          { "heading": "Solution évolutive", "subHeading": "Adaptez et développez facilement votre espace de travail Notion au fur et à mesure que votre entreprise grandit." },
+          { "heading": "Rationalisez votre flux de travail", "subHeading": "Personnalisez Notion pour qu'il corresponde à vos processus uniques, éliminant ainsi le besoin de multiples outils." },
+          { "heading": "Améliorez la collaboration", "subHeading": "Favorisez une communication fluide et un partage des connaissances au sein de votre équipe." },
+          { "heading": "Conseils d'experts", "subHeading": "Tirez parti de l'expertise de Quantboost pour adapter Notion précisément à vos besoins." },
+          { "heading": "Sécurisé et accessible", "subHeading": "Vos données dans Notion sont stockées en toute sécurité et accessibles de n'importe où, vous offrant tranquillité d'esprit et flexibilité." },
+          { "heading": "Contrôle des données", "subHeading": "Vous avez le contrôle total de vos données, avec des options pour les sauvegarder et les exporter facilement quand vous le souhaitez." },
+          { "heading": "Solutions sur mesure", "subHeading": "Nous personnalisons Notion pour répondre à vos besoins spécifiques, que vous intégriez des systèmes existants ou que vous construisiez une nouvelle pile technologique à partir de zéro." }
+        ]
+    },
+    "why_choose_us": {
+        "headline": "L'expertise qui nous distingue",
+        "subheading": "Transformer les flux de travail, maximiser la productivité",
+        "wcuComponents": [
+          { "title": "Partenaires dans la croissance", "description": "Nous ne sommes pas seulement des consultants ; nous sommes vos partenaires dans la transformation numérique, permettant à votre équipe d'atteindre une efficacité, une productivité et une croissance maximales.", "icon": "/growth.svg" },
+          { "title": "Expérience Microsoft", "description": "Notre équipe a perfectionné ses compétences chez Microsoft, en travaillant avec les principales plateformes de CRM et de service client.", "icon": "/experience.svg" },
+          { "title": "Équipe d'experts", "description": "Développeurs de logiciels et stratèges expérimentés possédant une expertise technique diversifiée.", "icon": "/team.svg" },
+          { "title": "Optimisation du flux de travail", "description": "Nous tirons parti de notre expérience pour optimiser vos flux de travail et améliorer l'expérience client.", "icon": "/workflow.svg" },
+          { "title": "Solutions Notion personnalisées", "description": "Nous créons des espaces de travail Notion sur mesure qui s'alignent parfaitement avec vos besoins commerciaux uniques.", "icon": "/solution.svg" },
+          { "title": "Intégration transparente", "description": "Notre maîtrise de divers outils de développement garantit une expérience Notion fluide et personnalisée.", "icon": "/integration.svg" }
+        ]
+    },
+    "contact": {
+        "headline": "Contactez-nous",
+        "subheading": "Des questions ou des remarques ? Envoyez-nous simplement un message !",
+        "connect": "Connectons-nous",
+        "connectDescription": "Nous aimerions avoir de vos nouvelles ! Veuillez remplir le formulaire ci-dessous et nous vous contacterons sous peu."
+    },
+    "contact_form": {
+        "firstName": "Prénom",
+        "lastName": "Nom de famille",
+        "email": "E-mail",
+        "phoneNumber": "Numéro de téléphone",
+        "message": "Message",
+        "send": "Envoyer"
+    }
+
+  }
