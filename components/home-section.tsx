@@ -1,9 +1,6 @@
 import type { NextPage } from "next";
 import { useTranslation } from "../context/TranslationContext";
-
-export type HomeSectionType = {
-  className?: string;
-};
+import { HomeSectionType } from "../types";
 
 const HomeSection: NextPage<HomeSectionType> = ({ className = "" }) => {
   const handleContactClick = () => {
