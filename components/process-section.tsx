@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
+import Image from 'next/image';
 import { useTranslation } from "../context/TranslationContext";
 import { useLanguage } from "../context/LanguageContext";
 import { Language, ProcessSectionType } from "../types";
+
 
 const ProcessSection: NextPage<ProcessSectionType> = ({ className = "" }) => {
   const { language } = useLanguage() as { language: Language };
@@ -23,10 +25,12 @@ const ProcessSection: NextPage<ProcessSectionType> = ({ className = "" }) => {
         </p>
       </div>
       <div className="w-auto">
-        <img
-          className="w-[619px] object-contain rounded-lg md:rounded-xl sm:max-w-[350px]"
+        <Image
+          src={imageSrc} 
+          width={619} 
+          height={539} 
           alt="Process illustration"
-          src={imageSrc}
+          className="object-contain rounded-lg md:rounded-xl sm:max-w-[350px]"
         />
       </div>
     </section>

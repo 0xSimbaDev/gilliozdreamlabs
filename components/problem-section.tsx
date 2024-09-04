@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import { ProblemSectionType } from "../types";
 import { useTranslation } from "../context/TranslationContext";
+import Image from 'next/image';
 
 const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
   const { translations } = useTranslation();
@@ -11,11 +12,11 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
     >
       <div className="flex flex-row items-center justify-center gap-6 max-w-full text-left text-[1.2rem] sm:text-[0.8rem]">
         <div className="flex items-center gap-3 md:flex-col "> 
-          <img
-            className="w-[100px] h-[100px] object-cover"
-            loading="lazy"
-            alt=""
+          <Image
             src="/Lost_Time.svg"
+            width={100}
+            height={100}
+            alt="" 
           />
           <a className="font-bold no-underline text-center">
             {translations.problem?.lostTime} 
@@ -23,11 +24,11 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
         </div>
 
         <div className="flex items-center gap-3 md:flex-col">
-          <img
-            className="w-[100px] h-[100px] object-cover"
-            loading="lazy"
-            alt=""
+          <Image
             src="/Scattered_Tools.svg"
+            width={100}
+            height={100}
+            alt="" 
           />
           <a className="font-bold no-underline text-center">
             {translations.problem?.scatteredTools} 
@@ -35,11 +36,11 @@ const ProblemSection: NextPage<ProblemSectionType> = ({ className = "" }) => {
         </div>
 
         <div className="flex items-center gap-3 md:flex-col">
-          <img
-            className="w-[100px] h-[100px] object-cover" 
-            loading="lazy"
-            alt=""
+          <Image
             src="/Missed_Opportunities.svg"
+            width={100}
+            height={100}
+            alt="" 
           />
           <a className="font-bold no-underline text-center">
             {translations.problem?.missedOpportunities} 
