@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import SolutionComponent from "./SolutionComponent";
 import { useTranslation } from "../context/TranslationContext";
-import { SolutionSection1Type } from "../types";
+import { SolutionSectionType } from "../types";
 import { Key } from "react";
 
-const SolutionSection: NextPage<SolutionSection1Type> = ({
+const SolutionSection: NextPage<SolutionSectionType> = ({
   className = "",
 }) => {
   const { translations } = useTranslation(); 

@@ -24,7 +24,7 @@ export type ProcessSectionType = {
 };
 
 // components/solution-section.tsx
-export type SolutionSection1Type = {
+export type SolutionSectionType = {
   className?: string;
 };
 
