@@ -1,38 +1,87 @@
 import type { NextPage } from 'next';
-import { useLanguage } from '../context/LanguageContext';
 import { HeaderType } from '../types';
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
+
+// NavLink Component: 
+const NavLink = ({ href, children }: { href: string; children: string }) => (
+  <Link href={href} legacyBehavior>
+    <a className="text-blueviolet no-underline decoration-non text-xs font-inter">{children}</a>
+  </Link>
+);
 
 const Header: NextPage<HeaderType> = ({ className = "" }) => {
-  const { language, setLanguage } = useLanguage(); 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className={`self-stretch overflow-hidden flex flex-row items-center justify-center py-[15px] px-40 gap-[30px] text-left text-5xl text-blueviolet font-montserrat lg:pl-40 lg:pr-40 lg:box-border md:flex-row md:flex-wrap md:items-center md:justify-start md:pl-[30px] md:pr-[30px] md:box-border ${className}`}>
-      <h1 className="m-0 flex-1 relative text-inherit sm:text-[1.2rem] font-bold font-[inherit] flex items-center h-[29px] z-[2]">
-        <span>
-          <span>QUANTBOOST</span>
-          <span className="text-white"> TECHNOLOGY</span>
-        </span>
-      </h1>
-      <nav className="h-[29px] overflow-hidden flex flex-row items-center justify-start gap-[30px] z-[1] md:w-auto md:[align-self:unset] md:flex-row">
-        <div className="flex"> 
-          <button
-            className={`py-2 px-4 rounded-l 
-                        ${language === "ENG" ? 'bg-blueviolet text-white' : 'bg-gray-300 text-gray-700'} 
-                        hover:bg-opacity-80 transition duration-300 cursor-pointer`}
-            onClick={() => setLanguage("ENG")}
-          >
-            ENG
-          </button>
-          <button
-            className={`py-2 px-4 rounded-r 
-                        ${language === "FR" ? 'bg-blueviolet text-white' : 'bg-gray-300 text-gray-700'} 
-                        hover:bg-opacity-80 transition duration-300 cursor-pointer`}
-            onClick={() => setLanguage("FR")}
-          >
-            FR
-          </button>
-        </div>
-      </nav>
+    <header className="w-full sticky top-0 z-[20] ">
+      <div className={`flex items-center justify-between px-6 py-4 h-[50px] ${className}`}>
+        {/* Logo */}
+        <Link className='' href="/" legacyBehavior>
+          <a className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="GilliozDreamLabs Logo"
+              width={370}
+              height={250}
+              className="md:hidden"
+            />
+            <Image
+              src="/logo_2.png"
+              alt="GilliozDreamLabs Logo"
+              width={50}
+              height={50}
+              className="hidden md:block"
+            />
+          </a>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="sm:hidden flex items-center gap-4">
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/services/notion-solutions">Notion Solutions</NavLink>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="sm:block hidden p-2 bg-transparent"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <img src="/menu.svg" alt="Menu Icon" className="w-6 h-6" />
+        </button>
+      </div>
+      <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#B78CFF] to-transparent"></div>
+
+      {/* Sidebar Menu */}
+      {isMenuOpen && (
+        <>
+          {/* Overlay */}
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={toggleMenu}
+          ></div>
+
+          {/* Sidebar */}
+          <div className="fixed top-0 right-0 w-[30%] h-full bg-white shadow-lg z-50 flex flex-col p-6">
+            <button
+              className="self-end text-2xl font-bold bg-transparent"
+              onClick={toggleMenu}
+              aria-label="Close menu"
+            >
+              <img src="/close.svg" alt="Menu Icon" className="w-6 h-6" />
+            </button>
+            <nav className="mt-6 flex flex-col gap-4">
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/services/notion-solutions">Notion Solutions</NavLink>
+            </nav>
+          </div>
+          
+        </>
+      )}
     </header>
   );
 };

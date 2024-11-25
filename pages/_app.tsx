@@ -7,14 +7,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
       <Head>
-        <title>Quantboost Technology | Streamline, Simplify, Succeed </title>
+        <title>GilliozDreamLabs | Where your vision  becomes reality </title>
         <meta name="description" content="Tired of juggling multiple tools and missing opportunities? Quantboost's custom Notion solutions centralize your workflow, boost productivity, and drive growth. Say goodbye to scattered information and hello to a unified workspace." />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <Component {...pageProps} />
+        <div className="min-h-screen flex flex-col bg-[#FAF8FF]">
+          <Component {...pageProps} />
+        </div>
     </Fragment>
   );
 }
