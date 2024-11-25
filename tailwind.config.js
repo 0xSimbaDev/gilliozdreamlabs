@@ -18,6 +18,7 @@ module.exports = {
           "800": "rgba(9, 12, 23, 0.05)",
           "900": "rgba(255, 255, 255, 0.04)",
         },
+        dark_bg: "#1E1F24",
         blueviolet: "#8c30f5",
         white: "#fff",
       },
