@@ -42,7 +42,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         {/* Desktop Navigation */}
         <nav className="sm:hidden flex items-center gap-4">
           <NavLink href="/">Home</NavLink>
-          <NavLink href="/services/notion-solutions">Notion Solutions</NavLink>
+          {/* <NavLink href="/">Notion Solutions</NavLink> */}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -76,7 +76,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
             </button>
             <nav className="mt-6 flex flex-col gap-4">
               <NavLink href="/">Home</NavLink>
-              <NavLink href="/services/notion-solutions">Notion Solutions</NavLink>
+              {/* <NavLink href="/services/notion-solutions">Notion Solutions</NavLink> */}
             </nav>
           </div>
           
