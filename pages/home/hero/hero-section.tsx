@@ -1,13 +1,21 @@
 import React from 'react'
 import { HeroSectionType } from '../../../types'
 import { NextPage } from 'next'
+import { motion } from "motion/react"
 
 const HeroSection: NextPage<HeroSectionType> = () => {
     return (
     <section
     className={`w-full flex flex-col items-center justify-center bg-[url('/home-section@3x.png')] bg-cover bg-no-repeat bg-[center] font-montserrat h-[636px] p-6 md:p-10`}
     >
-        <div className="text-content w-full text-center">
+        {/* Framer Motion Animation */}
+        <motion.div
+            initial="hidden"
+            whileInView={{ opacity: 1, y:-50 }}
+            transition={{duration: 0.5}}
+            viewport={{ once: true, amount: 0.5 }}
+            className="text-content w-full text-center"
+        >
             <div className="text-[4rem] font-bold mb-4 sm:text-[1.2rem]">
                 <span className="flex flex-col">
                 <span className="text-dark_bg">YOUR REALITY</span>
@@ -17,7 +25,7 @@ const HeroSection: NextPage<HeroSectionType> = () => {
             <h3 className="text-dark_bg text-[1rem] font-light mb-6 sm:text-[0.8rem]">
                 Transforming Ideas into Innovative Solutions
             </h3>
-        </div>
+        </motion.div>
     </section>
     )
 }
