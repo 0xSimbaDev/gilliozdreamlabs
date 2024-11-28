@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import React from 'react';
 import Header from "../components/header";
 import Footer from "../components/footer";
-import HeroSection from "./home/hero/hero-section";
-import ServicesSection from "./home/services/services-section";
-import AboutSection from "./home/about/about-section";
+import HeroSection from "../components/home/hero/hero-section"
+import ServicesSection from "../components/home/services/services-section";
+import AboutSection from "../components/home/about/about-section";
 
 const Index: NextPage = () => {
   return (
