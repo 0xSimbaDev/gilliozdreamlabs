@@ -50,3 +50,24 @@ jobs:
         echo "REGISTRY: ${{ env.REGISTRY }}"
         echo "IMAGE_NAME: ${{ env.IMAGE_NAME }}"
         echo "Resolved tags: ${{ steps.meta.outputs.tags }}"
+        - name: Pull existing image metadata from GHCR (if any)
+      id: pull-metadata
+      run: |
+        # Attempt to pull the latest image (if it exists)
+        IMAGE="${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest"
+        docker pull $IMAGE || echo "No existing image found"
+
+        # Extract the version from the image metadata
+        VERSION=$(docker inspect --format '{{ index .RepoTags 0 }}' $IMAGE || echo "v0.0.0")
+        echo "Existing image version: $VERSION"
+        
+        # Extract the version number (assuming semantic versioning format v1.0.0)
+        VERSION_NUMBER=$(echo $VERSION | sed 's/v//')
+        echo "Version number extracted: $VERSION_NUMBER"
+
+        # Increment the version
+        VERSION_INCREMENTED=$(echo $VERSION_NUMBER | awk -F. -v OFS=. '{$NF++;print}')
+        echo "Incremented version: v$VERSION_INCREMENTED"
+
+        # Set the incremented version as an environment variable
+        echo "VERSION=v$VERSION_INCREMENTED" >> $GITHUB_ENV
