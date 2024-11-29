@@ -49,7 +49,7 @@ jobs:
       id: pull-metadata
       run: |
         # Attempt to pull the latest image (if it exists)
-        IMAGE="${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest"
+        IMAGE="${{ env.REGISTRY }}/0xsimbadev/${{ env.IMAGE_NAME }}:latest"
         docker pull $IMAGE || echo "No existing image found"
 
         # Extract the version from the image metadata
