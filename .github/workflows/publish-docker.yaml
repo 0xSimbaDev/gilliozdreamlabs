@@ -46,3 +46,8 @@ jobs:
         flavor: |
           latest=true
           prefix=true
+          
+    - name: Display metadata
+      run: |
+        echo "Docker Tags: ${{ steps.meta.outputs.tags }}"
+        echo "Docker Labels: ${{ steps.meta.outputs.labels }}"
