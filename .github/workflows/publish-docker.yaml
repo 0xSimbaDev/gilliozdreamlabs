@@ -51,6 +51,8 @@ jobs:
         echo "IMAGE_NAME: ${{ env.IMAGE_NAME }}"
         echo "Resolved tags: ${{ steps.meta.outputs.tags }}"
         - name: Pull existing image metadata from GHCR (if any)
+
+    - name: Pull existing image metadata from GHCR (if any)
       id: pull-metadata
       run: |
         # Attempt to pull the latest image (if it exists)
