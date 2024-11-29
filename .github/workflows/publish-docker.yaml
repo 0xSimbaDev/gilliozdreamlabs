@@ -39,12 +39,14 @@ jobs:
         tags: |
           type=semver,pattern={{version}}-dev
           type=sha
+          type=raw,value=latest
         labels: |
           org.opencontainers.image.title=${{ env.IMAGE_NAME }}
           org.opencontainers.image.description=Gillioz DreamLabs Web App
           org.opencontainers.image.version={{version}}
 
-    - name: Display metadata
+    - name: Debug environment variables
       run: |
-        echo "Docker Tags: ${{ steps.meta.outputs.tags }}"
-        echo "Docker Labels: ${{ steps.meta.outputs.labels }}"
+        echo "REGISTRY: ${{ env.REGISTRY }}"
+        echo "IMAGE_NAME: ${{ env.IMAGE_NAME }}"
+        echo "Resolved tags: ${{ steps.meta.outputs.tags }}"
