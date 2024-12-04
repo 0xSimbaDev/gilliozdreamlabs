@@ -6,7 +6,11 @@ on:
       - main
       - staging
       - dev
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+      - staging
+      - dev
 
 env:
   REGISTRY: ghcr.io
