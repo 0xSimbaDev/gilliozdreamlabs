@@ -33,36 +33,12 @@ jobs:
         
     - name: Extract metadata (tags, labels) for Docker
       id: meta
-      uses: docker/metadata-action@v4
+      uses: docker/metadata-action@v5
       with:
+        github-token: ${{ secrets.DOCKER_PASSWORD }}
         images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
-        tags: |
-          type=semver,pattern={{version}}-dev
-          type=sha
-          type=raw,value=latest
-        labels: |
-          org.opencontainers.image.title=${{ env.IMAGE_NAME }}
-          org.opencontainers.image.description=Gillioz DreamLabs Web App
-          org.opencontainers.image.version={{version}}
-
-    - name: Pull existing image metadata from GHCR (if any)
-      id: pull-metadata
+    
+    - name: Access Metadata
       run: |
-        # Attempt to pull the latest image (if it exists)
-        IMAGE="${{ env.REGISTRY }}/0xsimbadev/${{ env.IMAGE_NAME }}:latest"
-        docker pull $IMAGE || echo "No existing image found"
-
-        # Extract the version from the image metadata
-        VERSION=$(docker inspect --format '{{ index .RepoTags 0 }}' $IMAGE || echo "v0.0.0")
-        echo "Existing image version: $VERSION"
-        
-        # Extract the version number (assuming semantic versioning format v1.0.0)
-        VERSION_NUMBER=$(echo $VERSION | sed 's/v//')
-        echo "Version number extracted: $VERSION_NUMBER"
-
-        # Increment the version
-        VERSION_INCREMENTED=$(echo $VERSION_NUMBER | awk -F. -v OFS=. '{$NF++;print}')
-        echo "Incremented version: v$VERSION_INCREMENTED"
-
-        # Set the incremented version as an environment variable
-        echo "VERSION=v$VERSION_INCREMENTED" >> $GITHUB_ENV
+        echo "Tags: ${{ steps.meta.outputs.tags }}"
+        echo "Labels: ${{ steps.meta.outputs.labels }}"
