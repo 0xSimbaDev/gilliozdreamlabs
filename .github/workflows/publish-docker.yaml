@@ -39,9 +39,8 @@ jobs:
           github-token: ${{ secrets.DOCKER_PASSWORD }}
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
-            type=ref,event=branch,filter=^main$,prefix=latest # Tag `main` as `latest`
-            type=ref,event=branch # Tag other branches (e.g., dev, staging) with branch names
-            type=sha,format=short # Add a short SHA-based tag for traceability
+            type=ref,event=branch,
+            type=sha,format=short 
 
       - name: Access Metadata
         run: |
