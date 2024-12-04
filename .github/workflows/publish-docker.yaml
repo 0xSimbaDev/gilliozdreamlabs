@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: gilliozdreamlabs
+  IMAGE_NAME: 0xsimbadev/gilliozdreamlabs
 
 jobs:
 
@@ -36,7 +36,7 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         github-token: ${{ secrets.DOCKER_PASSWORD }}
-        images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}
+        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
     
     - name: Access Metadata
       run: |
