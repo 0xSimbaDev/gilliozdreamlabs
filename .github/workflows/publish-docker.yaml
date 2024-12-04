@@ -41,7 +41,8 @@ jobs:
           type=ref,event=branch
           type=sha,format=short
           type=ref,event=tag
-          type=ref,event=branch,prefix=latest
+          type=semver,pattern={{version}}
+          type=ref,event=branch,prefix=latest,filter=^main$
     
     - name: Access Metadata
       run: |
