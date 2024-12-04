@@ -37,7 +37,7 @@ const AboutSection: NextPage<AboutComponentType> = () => {
                 <motion.div 
                     initial="hidden"
                     whileInView={{ opacity: 1, x:-10 }}
-                    transition={{duration: 1}}
+                    transition={{duration: 0.5}}
                     viewport={{ once: true, amount: 0.5 }}
                     className="flex flex-col items-start font-montserrat text-dark_bg"
                 >

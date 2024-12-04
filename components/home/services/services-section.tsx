@@ -47,7 +47,7 @@ const ServicesSection: NextPage<ServicesSectionType> = () => {
             <motion.div
                 initial="hidden"
                 whileInView={{ opacity: 1, y:-50 }}
-                transition={{duration: 0.5}}
+                transition={{duration: 0.3}}
                 viewport={{ once: true, amount: 0.5 }}
                 className="flex flex-col gap-10 py-10"
             >
