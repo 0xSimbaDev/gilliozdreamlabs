@@ -18,22 +18,22 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
 
   return (
     <header className="w-full sticky top-0 z-[20] ">
-      <div className={`flex items-center justify-between px-6 py-4 h-[50px] ${className}`}>
+      <div className={`flex items-center justify-between px-6 py-4 h-[25px] ${className}`}>
         {/* Logo */}
         <Link className='' href="/" legacyBehavior>
           <a className="flex items-center">
             <Image
               src="/logo.png"
               alt="GilliozDreamLabs Logo"
-              width={370}
-              height={250}
+              width={300}
+              height={200}
               className="md:hidden"
             />
             <Image
               src="/logo_2.png"
               alt="GilliozDreamLabs Logo"
-              width={50}
-              height={50}
+              width={45}
+              height={45}
               className="hidden md:block"
             />
           </a>
@@ -42,7 +42,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
         {/* Desktop Navigation */}
         <nav className="sm:hidden flex items-center gap-4">
           <NavLink href="/">Home</NavLink>
-          {/* <NavLink href="/">Notion Solutions</NavLink> */}
+          <NavLink href="/notion">Notion Solutions</NavLink>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -76,7 +76,7 @@ const Header: NextPage<HeaderType> = ({ className = "" }) => {
             </button>
             <nav className="mt-6 flex flex-col gap-4">
               <NavLink href="/">Home</NavLink>
-              {/* <NavLink href="/services/notion-solutions">Notion Solutions</NavLink> */}
+              <NavLink href="/notion">Notion Solutions</NavLink>
             </nav>
           </div>
           

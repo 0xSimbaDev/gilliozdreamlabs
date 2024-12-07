@@ -14,7 +14,7 @@ const ServicesComponent: NextPage<ServicesComponentType> = ({
         <div className={`flex flex-col items-center gap-4 w-[380px] sm:max-w-[320px] ${className}`}>
             <div className="relative">
                 <div className="h-[50px] w-[50px] rounded-2xl bg-[#2B2B2B] flex items-center justify-center p-1 sm:w-[50px] sm:h-[50px]">
-                <Image src={icon || ""} alt="" width={40} height={40} />
+                    <Image src={icon || ""} alt="" width={40} height={40} />
                 </div>
             </div>
             <div className="flex flex-col gap-3 font-inter">
