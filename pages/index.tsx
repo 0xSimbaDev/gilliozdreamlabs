@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import HeroSection from "../components/home/hero/hero-section"
 import ServicesSection from "../components/home/services/services-section";
 import AboutSection from "../components/home/about/about-section";
+import ContactSection from "../components/notion/contactus/contact-section";
 
 const Index: NextPage = () => {
   return (
@@ -13,6 +14,9 @@ const Index: NextPage = () => {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
+      <section id="contact">
+        <ContactSection />
+      </section>
       <Footer />
     </main>
   );
