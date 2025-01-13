@@ -14,7 +14,7 @@ const Index: NextPage = () => {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
-      <section id="contact">
+      <section id="contactus">
         <ContactSection />
       </section>
       <Footer />
