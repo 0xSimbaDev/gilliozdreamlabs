@@ -7,6 +7,7 @@ import ProcessSection from "../../components/notion/process/process-section";
 import WhyChooseUs from "../../components/notion/wcu/whychooseus-section";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import ContactSection from "../../components/notion/contactus/contact-section";
 
 const NotionSolutions: NextPage = () => {
 const [showButton, setShowButton] = useState(false);
