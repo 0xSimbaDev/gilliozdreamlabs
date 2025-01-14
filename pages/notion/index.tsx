@@ -1,10 +1,5 @@
 import type { NextPage } from "next";
 import React, { useState, useEffect } from 'react';
-// import WhyChooseUs from "../../components/notion-solutions/why-choose-us";
-// import ContactSection from "../../components/notion-solutions/contact-section";
-// import ProblemSection from "../../components/notion-solutions/problem-section";
-// import ProcessSection from "../../components/notion-solutions/process-section";
-// import SolutionSection from "../../components/notion-solutions/solution-section";
 import HeroSection from "../../components/notion/hero/hero-section";
 import ProblemSection from "../../components/notion/problem/problem-section";
 import SolutionSection from "../../components/notion/solutions/solutions-section";
@@ -52,9 +47,6 @@ return (
             </section>
             <section id="advantage">
                 <WhyChooseUs />
-            </section>
-            <section id="contact">
-                <ContactSection />
             </section>
             {/* 
              */}

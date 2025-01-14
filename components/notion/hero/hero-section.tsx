@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
 import { HeroSectionType } from "../../../types";
 import { motion } from "motion/react"
+import { useRouter } from "next/router";
 
 const HeroSection: NextPage<HeroSectionType> = ({ className = "" }) => {
-    
+const router = useRouter();
+
 const handleContactClick = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    router.push('/#contactus');
 };
 
 // Content Data
